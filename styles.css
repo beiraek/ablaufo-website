@@ -139,6 +139,34 @@ a:hover { color: var(--primary-active); }
   align-self: flex-end; margin-bottom: 3px;
 }
 
+/* ─── Scroll-Fortschritt (dünn, am Header angedockt) ───────── */
+.scroll-progress {
+  position: fixed; top: 0; left: 0; right: 0; height: 2px;
+  z-index: 60; pointer-events: none; background: transparent;
+}
+.scroll-progress span {
+  display: block; height: 100%; background: var(--primary);
+  transform: scaleX(0); transform-origin: left center;
+}
+
+/* ─── Mobile Sticky-CTA (führt jederzeit zum Termin) ───────── */
+.mobile-cta {
+  position: fixed; left: var(--pad); right: var(--pad); bottom: var(--sp-md);
+  z-index: 55; display: none; align-items: center; justify-content: center;
+  height: 52px; border-radius: var(--r-pill);
+  background: var(--primary); color: var(--on-primary);
+  font-size: 1rem; font-weight: 600; text-decoration: none;
+  box-shadow: 0 6px 20px rgba(36,86,255,.35);
+  opacity: 0; transform: translateY(120%);
+  transition: opacity .3s ease, transform .3s cubic-bezier(.2,.6,.2,1);
+}
+.mobile-cta.is-visible { opacity: 1; transform: translateY(0); }
+@media (max-width: 759px) { .mobile-cta { display: flex; } }
+@media (prefers-reduced-motion: reduce) {
+  .mobile-cta { transition: opacity .2s ease; transform: none; }
+  .mobile-cta.is-visible { transform: none; }
+}
+
 /* ─── HERO (Cal.com hero-band: weißer Grund, 7/5 Grid) ─────── */
 .hero { padding-top: clamp(2rem, 4vw, 3rem); padding-bottom: var(--sp-section); background: var(--canvas); }
 .hero-grid {
