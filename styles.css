@@ -133,7 +133,7 @@ a:hover { color: var(--primary-active); }
   font-size: 1.1rem; font-weight: 700; letter-spacing: -0.03em; color: var(--ink);
 }
 .brand:hover { opacity: 0.85; }
-.brand-logo { height: 16px; width: auto; display: block; }
+.brand-logo { height: 21px; width: auto; display: block; }
 .brand-dot {
   width: 6px; height: 6px; border-radius: 50%; background: var(--primary);
   align-self: flex-end; margin-bottom: 3px;
