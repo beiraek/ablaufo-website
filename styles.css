@@ -215,27 +215,8 @@ a:hover { color: var(--primary-active); }
   border-radius: var(--r-xl); padding: clamp(1.5rem, 4vw, 2.5rem);
   box-shadow: var(--shadow-md);
 }
-.week-head, .week-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
-.week-head { margin-bottom: 8px; }
-.week-head span { text-align: center; font-size: 0.7rem; font-weight: 600; letter-spacing: .04em; color: var(--muted); }
-.cell {
-  aspect-ratio: 1; border-radius: 6px;
-  background: var(--surface-card); border: 1px solid var(--hairline);
-}
-.cell.busy {
-  background: var(--primary); border-color: var(--primary);
-  animation: freeup 6s ease-in-out infinite;
-}
-@keyframes freeup {
-  0%, 32%   { background: var(--primary); border-color: var(--primary); }
-  52%, 92%  { background: #eef2ff; border-color: #dce5ff; }
-  100%      { background: var(--primary); border-color: var(--primary); }
-}
-.week-legend { display: flex; justify-content: center; gap: var(--sp-lg); margin-top: var(--sp-md); }
-.week-legend span { display: inline-flex; align-items: center; gap: 6px; font-size: 0.78rem; color: var(--muted); }
-.week-legend i { width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; }
-.dot-busy { background: var(--primary); }
-.dot-free { background: #eef2ff; border: 1px solid #dce5ff; }
+@media (max-width: 600px) { .hero-visual { padding: 12px; } }
+.pipeline { width: 100%; height: auto; display: block; }
 .flow-caption { text-align: center; margin-top: var(--sp-lg); font-size: 0.875rem; color: var(--muted); }
 
 /* ─── Trust Strip ──────────────────────────────────────────── */
@@ -293,6 +274,15 @@ section[id] { scroll-margin-top: 80px; }
 }
 .step h3 { margin-bottom: var(--sp-sm); }
 .step p { color: var(--body); font-size: 0.95rem; line-height: 1.6; }
+/* Signal 1→2→3: die Nummern leuchten beim Reveal nacheinander auf */
+.steps .step.is-visible .step-num { animation: stepSignal 1s cubic-bezier(.2,.6,.2,1) both; }
+.steps .step:nth-child(2).is-visible .step-num { animation-delay: .28s; }
+.steps .step:nth-child(3).is-visible .step-num { animation-delay: .56s; }
+@keyframes stepSignal {
+  0%   { box-shadow: 0 0 0 0 rgba(36,86,255,.5); transform: scale(1); }
+  40%  { box-shadow: 0 0 0 10px rgba(36,86,255,0); transform: scale(1.1); }
+  100% { box-shadow: 0 0 0 0 rgba(36,86,255,0); transform: scale(1); }
+}
 
 /* ─── Versprechen / Vorleistung (dunkles Akzent-Band) ──────── */
 .promise { background: var(--surface-dark); color: var(--on-dark); }
@@ -433,7 +423,8 @@ details p {
 
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
-  .cell.busy, .eyebrow .dot { animation: none; }
+  .eyebrow .dot { animation: none; }
+  .steps .step.is-visible .step-num { animation: none; }
   .rotate > span { animation: none; opacity: 0; }
   .rotate > span:first-child { opacity: 1; }
   html { scroll-behavior: auto; }
