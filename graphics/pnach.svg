@@ -1,0 +1,73 @@
+<svg class="pnac" viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ewiges, ergebnisloses Nachtelefonieren">
+  <style>
+    .pnac{font-family:inherit;}
+    .pnac .pnac-stroke{fill:none;stroke:#6b7280;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;}
+    .pnac .pnac-line{fill:none;stroke:#e5e7eb;stroke-width:1.9;stroke-linecap:round;}
+    .pnac .pnac-wave{fill:none;stroke:#6b7280;stroke-width:1.9;stroke-linecap:round;opacity:0;}
+    .pnac .pnac-dot{fill:#6b7280;opacity:0;}
+    .pnac .pnac-label{fill:#6b7280;font-size:8px;text-anchor:middle;letter-spacing:.3px;}
+
+    .pnac .pnac-phone{animation:pnacShake 4.5s ease-in-out infinite;transform-origin:110px 60px;}
+    @keyframes pnacShake{
+      0%,72%,100%{transform:rotate(0deg) translateY(0);}
+      74%{transform:rotate(-5deg) translateY(-.5px);}
+      77%{transform:rotate(5deg);}
+      80%{transform:rotate(-4deg);}
+      83%{transform:rotate(4deg);}
+      86%{transform:rotate(-2deg);}
+      89%{transform:rotate(0deg);}
+    }
+
+    .pnac .pnac-w1{animation:pnacRing 4.5s ease-out infinite;}
+    .pnac .pnac-w2{animation:pnacRing 4.5s ease-out infinite;}
+    .pnac .pnac-w3{animation:pnacRing 4.5s ease-out infinite;}
+    .pnac .pnac-w4{animation:pnacRing 4.5s ease-out infinite;}
+    @keyframes pnacRing{
+      0%,70%,100%{opacity:0;}
+      74%{opacity:.55;}
+      90%{opacity:0;}
+    }
+
+    @supports (offset-path:path('M0,0 L1,1')){
+      .pnac .pnac-d1{offset-path:path('M110,72 L110,40');animation:pnacOrbit 4.5s linear infinite;}
+      .pnac .pnac-d2{offset-path:path('M110,72 L110,40');animation:pnacOrbit 4.5s linear infinite 1.5s;}
+      .pnac .pnac-d3{offset-path:path('M110,72 L110,40');animation:pnacOrbit 4.5s linear infinite 3s;}
+    }
+    @keyframes pnacOrbit{
+      0%{offset-distance:0%;opacity:0;}
+      18%{opacity:.85;}
+      75%{opacity:.85;}
+      100%{offset-distance:100%;opacity:0;}
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      .pnac .pnac-phone{animation:none;transform:none;}
+      .pnac .pnac-wave,.pnac .pnac-dot{display:none;}
+    }
+  </style>
+
+  <!-- baseline -->
+  <line class="pnac-line" x1="40" y1="108" x2="180" y2="108"/>
+
+  <!-- repeating attempt markers (Wiederholung, ergebnislos) -->
+  <circle class="pnac-dot pnac-d1" r="2.1"/>
+  <circle class="pnac-dot pnac-d2" r="2.1"/>
+  <circle class="pnac-dot pnac-d3" r="2.1"/>
+
+  <g class="pnac-phone">
+    <!-- ring waves left -->
+    <path class="pnac-wave pnac-w1" d="M86,52 C80,56 80,64 86,68"/>
+    <path class="pnac-wave pnac-w3" d="M79,47 C69,54 69,66 79,73"/>
+    <!-- ring waves right -->
+    <path class="pnac-wave pnac-w2" d="M134,52 C140,56 140,64 134,68"/>
+    <path class="pnac-wave pnac-w4" d="M141,47 C151,54 151,66 141,73"/>
+
+    <!-- phone handset -->
+    <path class="pnac-stroke" d="M98,48
+      a3,3 0 0 1 3,-3 l4,0 a2,2 0 0 1 2,1.6 l1,4.4 a2,2 0 0 1 -1,2.2 l-2.4,1.2
+      a13,13 0 0 0 6.6,6.6 l1.2,-2.4 a2,2 0 0 1 2.2,-1 l4.4,1 a2,2 0 0 1 1.6,2 l0,4
+      a3,3 0 0 1 -3,3 a18,18 0 0 1 -17.8,-17.8 z"/>
+  </g>
+
+  <text class="pnac-label" x="110" y="20">erneut nachfassen</text>
+</svg>

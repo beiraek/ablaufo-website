@@ -1,0 +1,69 @@
+<svg class="pcha" viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="pcha-t pcha-d">
+  <title id="pcha-t">Format-Chaos</title>
+  <desc id="pcha-d">Vier unterschiedliche Belegformate liegen unordentlich und unruhig verstreut.</desc>
+  <style>
+    .pcha .pcha-card{fill:#ffffff;stroke:#e5e7eb;stroke-width:1.5;}
+    .pcha .pcha-ico{fill:none;stroke:#6b7280;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;}
+    .pcha .pcha-acc{fill:#2456FF;}
+    .pcha .pcha-line{fill:none;stroke:#e5e7eb;stroke-width:1.9;stroke-linecap:round;}
+    .pcha .pcha-dot{opacity:0;}
+
+    .pcha .pcha-i1{transform-box:fill-box;transform-origin:center;animation:pchaJitterA 4.5s ease-in-out infinite;}
+    .pcha .pcha-i2{transform-box:fill-box;transform-origin:center;animation:pchaJitterB 5.2s ease-in-out infinite;}
+    .pcha .pcha-i3{transform-box:fill-box;transform-origin:center;animation:pchaJitterC 4.8s ease-in-out infinite;}
+    .pcha .pcha-i4{transform-box:fill-box;transform-origin:center;animation:pchaJitterD 5.6s ease-in-out infinite;}
+
+    @keyframes pchaJitterA{0%,100%{transform:rotate(-9deg) translate(0,0);}50%{transform:rotate(-6deg) translate(.8px,-1px);}}
+    @keyframes pchaJitterB{0%,100%{transform:rotate(7deg) translate(0,0);}50%{transform:rotate(10deg) translate(-1px,.8px);}}
+    @keyframes pchaJitterC{0%,100%{transform:rotate(-5deg) translate(0,0);}50%{transform:rotate(-2deg) translate(1px,.6px);}}
+    @keyframes pchaJitterD{0%,100%{transform:rotate(11deg) translate(0,0);}50%{transform:rotate(8deg) translate(-.7px,-1px);}}
+
+    @supports (offset-path:path('M0,0 L1,1')){ .pcha .pcha-dot{opacity:1;} }
+    .pcha .pcha-q1{offset-path:path('M44,98 L70,104 L96,100');animation:pchaDrift 5s linear infinite;}
+    .pcha .pcha-q2{offset-path:path('M128,102 L154,98 L180,104');animation:pchaDrift 5s linear infinite 2.5s;}
+    @keyframes pchaDrift{0%{offset-distance:0%;opacity:0;}15%{opacity:.55;}85%{opacity:.55;}100%{offset-distance:100%;opacity:0;}}
+
+    @media (prefers-reduced-motion:reduce){
+      .pcha .pcha-i1,.pcha .pcha-i2,.pcha .pcha-i3,.pcha .pcha-i4{animation:none;}
+      .pcha .pcha-dot{display:none;}
+    }
+  </style>
+
+  <line class="pcha-line" x1="40" y1="98" x2="180" y2="98" opacity=".5"/>
+
+  <g class="pcha-i1">
+    <g transform="translate(38,30)">
+      <rect class="pcha-card" x="-19" y="-13" width="38" height="26" rx="3"/>
+      <path class="pcha-ico" d="M-13,-7 H13 V7 H-13 Z"/>
+      <path class="pcha-ico" d="M-13,-7 L0,3 L13,-7"/>
+    </g>
+  </g>
+
+  <g class="pcha-i2">
+    <g transform="translate(96,26)">
+      <rect class="pcha-card" x="-18" y="-15" width="36" height="30" rx="3"/>
+      <rect class="pcha-ico" x="-11" y="-9" width="22" height="18" rx="2"/>
+      <circle class="pcha-ico" cx="0" cy="-1" r="3.4"/>
+      <path class="pcha-ico" d="M-7,-7.5 L-3.5,-7.5"/>
+    </g>
+  </g>
+
+  <g class="pcha-i3">
+    <g transform="translate(150,32)">
+      <rect class="pcha-card" x="-16" y="-16" width="32" height="32" rx="3"/>
+      <path class="pcha-ico" d="M-8,-11 H4 L9,-6 V11 H-8 Z"/>
+      <path class="pcha-ico" d="M4,-11 V-6 H9"/>
+      <circle class="pcha-acc" cx="0" cy="4" r="2.1"/>
+    </g>
+  </g>
+
+  <g class="pcha-i4">
+    <g transform="translate(110,72)">
+      <rect class="pcha-card" x="-15" y="-17" width="30" height="34" rx="3"/>
+      <path class="pcha-ico" d="M-8,-9 H8 M-8,-3 H8 M-8,3 H4"/>
+    </g>
+  </g>
+
+  <circle class="pcha-dot pcha-q1" r="2" fill="#6b7280"/>
+  <circle class="pcha-dot pcha-q2" r="2" fill="#6b7280"/>
+</svg>

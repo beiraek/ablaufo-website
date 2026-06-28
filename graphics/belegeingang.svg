@@ -1,0 +1,100 @@
+<svg class="gbel" viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="gbel-t gbel-d">
+  <title id="gbel-t">Automatischer Belegeingang</title>
+  <desc id="gbel-d">Belege gleiten nacheinander nach rechts in einen Eingang und werden mit einem blauen Häkchen automatisch angenommen und sortiert.</desc>
+  <style>
+    .gbel{--blue:#2456FF;--blue-dark:#1B3FBF;--ink:#111111;--line:#e5e7eb;--card:#ffffff;--fill:#f5f5f5;}
+    .gbel .gbel-card{fill:var(--card);stroke:var(--line);stroke-width:1.5;}
+    .gbel .gbel-ico{fill:none;stroke:var(--ink);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;}
+    .gbel .gbel-tray{fill:var(--fill);stroke:var(--line);stroke-width:1.5;}
+    .gbel .gbel-tray-ic{fill:none;stroke:var(--ink);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;}
+    .gbel .gbel-glow{transform-box:fill-box;transform-origin:center;animation:gbelPulse 4.8s ease-in-out infinite;}
+    @keyframes gbelPulse{0%,100%{opacity:.16;transform:scale(1);}50%{opacity:.30;transform:scale(1.05);}}
+    .gbel .gbel-check{fill:none;stroke:var(--blue);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;opacity:0;}
+    .gbel .gbel-check-dot{fill:var(--blue);opacity:0;}
+
+    .gbel .gbel-beleg{opacity:0;}
+    @supports (offset-path:path('M0,0 L1,1')){
+      .gbel .gbel-beleg{opacity:1;offset-rotate:0deg;}
+      .gbel .gbel-b1{offset-path:path('M0,0 C40,-9 80,-18 117,-18');animation:gbelSlide 4.8s ease-in-out infinite 0s;}
+      .gbel .gbel-b2{offset-path:path('M0,0 C40,0 80,0 117,0');animation:gbelSlide 4.8s ease-in-out infinite 1.6s;}
+      .gbel .gbel-b3{offset-path:path('M0,0 C40,9 80,18 117,18');animation:gbelSlide 4.8s ease-in-out infinite 3.2s;}
+      .gbel .gbel-check,.gbel .gbel-check-dot{animation:gbelTick 4.8s ease-in-out infinite;}
+    }
+    @keyframes gbelSlide{
+      0%{offset-distance:0%;opacity:0;}
+      8%{opacity:1;}
+      24%{offset-distance:88%;opacity:1;}
+      30%{offset-distance:100%;opacity:0;}
+      100%{offset-distance:100%;opacity:0;}
+    }
+    @keyframes gbelTick{
+      0%,24%{opacity:0;transform:translateY(0) scale(.8);}
+      30%{opacity:1;transform:translateY(0) scale(1);}
+      44%{opacity:1;}
+      52%,100%{opacity:0;}
+    }
+    .gbel .gbel-check,.gbel .gbel-check-dot{transform-box:fill-box;transform-origin:center;}
+
+    @media (prefers-reduced-motion:reduce){
+      .gbel .gbel-beleg{display:none;}
+      .gbel .gbel-glow{animation:none;opacity:.22;}
+      .gbel .gbel-check{animation:none;opacity:1;}
+      .gbel .gbel-check-dot{animation:none;opacity:1;}
+      .gbel .gbel-rest{opacity:1;}
+    }
+    .gbel .gbel-rest{opacity:0;}
+  </style>
+
+  <!-- Tray / Eingang rechts, vertikal zentriert (y=60) -->
+  <g transform="translate(150,42)">
+    <rect class="gbel-glow" x="-3" y="-3" width="56" height="42" rx="9" fill="#2456FF"/>
+    <rect class="gbel-tray" x="0" y="0" width="50" height="36" rx="7"/>
+    <!-- Inbox / Tray icon -->
+    <path class="gbel-tray-ic" d="M10,20 h7 l3,5 h10 l3,-5 h7"/>
+    <path class="gbel-tray-ic" d="M14,11 v9 M36,11 v9"/>
+  </g>
+
+  <!-- Statisches Häkchen-Badge (reduced-motion Endzustand) -->
+  <g class="gbel-rest" transform="translate(188,40)">
+    <circle r="9" fill="#2456FF"/>
+    <path d="M-3.6,0 L-1,2.6 L4,-3" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Animiertes Häkchen-Badge am Tray (oben rechts) -->
+  <g transform="translate(188,40)">
+    <circle class="gbel-check-dot" r="9"/>
+    <path class="gbel-check" d="M-3.6,0 L-1,2.6 L4,-3" stroke="#ffffff"/>
+  </g>
+
+  <!-- Beleg-Karten: gemeinsamer Ziel-Y = Tray-Mitte (y=60), Start vertikal
+       symmetrisch um y=60 gestaffelt, Pfade laufen alle auf Tray-Höhe ein.
+       Lokaler Ursprung jeder Karte = (0,0) -> Karte ist 26x32, daher
+       translate so, dass Kartenmitte am Pfadstart auf gewünschtem y sitzt. -->
+  <g class="gbel-beleg gbel-b1" transform="translate(24,62)">
+    <g transform="translate(-13,-16)">
+      <rect class="gbel-card" x="0" y="0" width="26" height="32" rx="4"/>
+      <path class="gbel-ico" d="M16,3 v6 h6"/>
+      <line class="gbel-ico" x1="7" y1="16" x2="19" y2="16"/>
+      <line class="gbel-ico" x1="7" y1="21" x2="19" y2="21"/>
+      <line class="gbel-ico" x1="7" y1="26" x2="14" y2="26"/>
+    </g>
+  </g>
+  <g class="gbel-beleg gbel-b2" transform="translate(24,44)">
+    <g transform="translate(-13,-16)">
+      <rect class="gbel-card" x="0" y="0" width="26" height="32" rx="4"/>
+      <path class="gbel-ico" d="M16,3 v6 h6"/>
+      <line class="gbel-ico" x1="7" y1="16" x2="19" y2="16"/>
+      <line class="gbel-ico" x1="7" y1="21" x2="19" y2="21"/>
+      <line class="gbel-ico" x1="7" y1="26" x2="14" y2="26"/>
+    </g>
+  </g>
+  <g class="gbel-beleg gbel-b3" transform="translate(24,26)">
+    <g transform="translate(-13,-16)">
+      <rect class="gbel-card" x="0" y="0" width="26" height="32" rx="4"/>
+      <path class="gbel-ico" d="M16,3 v6 h6"/>
+      <line class="gbel-ico" x1="7" y1="16" x2="19" y2="16"/>
+      <line class="gbel-ico" x1="7" y1="21" x2="19" y2="21"/>
+      <line class="gbel-ico" x1="7" y1="26" x2="14" y2="26"/>
+    </g>
+  </g>
+</svg>

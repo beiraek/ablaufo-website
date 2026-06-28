@@ -1,0 +1,43 @@
+<svg class="ponb" viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ponb-t ponb-d"><title id="ponb-t">Onboarding von Hand</title><desc id="ponb-d">Eine Checkliste hakt sich ab und beginnt dann wieder von vorn – die ewige manuelle Wiederholung.</desc><style>
+.ponb .ponb-card{fill:#fff;stroke:#e5e7eb;stroke-width:1.5;}
+.ponb .ponb-ico{fill:none;stroke:#6b7280;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;}
+.ponb .ponb-line{fill:none;stroke:#e5e7eb;stroke-width:1.9;stroke-linecap:round;}
+.ponb .ponb-box{fill:none;stroke:#9ca3af;stroke-width:1.9;}
+.ponb .ponb-check{fill:none;stroke:#9ca3af;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;opacity:0;}
+.ponb .ponb-cur{stroke:#6b7280;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;fill:#fff;opacity:0;}
+
+/* Loop: jede Zeile hakt nacheinander ab, am Ende leert sich alles wieder */
+@keyframes ponbTick{0%,12%{opacity:0;}18%,82%{opacity:1;}90%,100%{opacity:0;}}
+.ponb .ponb-r1 .ponb-check{animation:ponbTick 5.5s ease-in-out infinite;animation-delay:.3s;}
+.ponb .ponb-r2 .ponb-check{animation:ponbTick 5.5s ease-in-out infinite;animation-delay:1.0s;}
+.ponb .ponb-r3 .ponb-check{animation:ponbTick 5.5s ease-in-out infinite;animation-delay:1.7s;}
+
+/* Cursor laeuft die Zeilen ab und springt am Ende zurueck (Wiederholung von Hand) */
+@supports (offset-path:path('M0,0 L1,1')){
+  .ponb .ponb-cur{offset-path:path('M150,40 L150,62 L150,84 L150,40');animation:ponbCur 5.5s ease-in-out infinite;}
+}
+@keyframes ponbCur{0%{offset-distance:0%;opacity:0;}6%{opacity:1;}28%{offset-distance:33%;}56%{offset-distance:66%;}84%{offset-distance:100%;opacity:1;}92%,100%{offset-distance:100%;opacity:0;}}
+
+@media (prefers-reduced-motion:reduce){
+  .ponb .ponb-check{animation:none;opacity:1;}
+  .ponb .ponb-cur{animation:none;opacity:0;}
+}
+</style>
+<rect class="ponb-card" x="46" y="22" width="128" height="76" rx="10"/>
+<g class="ponb-r1">
+  <rect class="ponb-box" x="62" y="34" width="12" height="12" rx="3"/>
+  <line class="ponb-line" x1="84" y1="40" x2="150" y2="40"/>
+  <polyline class="ponb-check" points="64.5,40.2 67.5,43 72,37.5"/>
+</g>
+<g class="ponb-r2">
+  <rect class="ponb-box" x="62" y="56" width="12" height="12" rx="3"/>
+  <line class="ponb-line" x1="84" y1="62" x2="150" y2="62"/>
+  <polyline class="ponb-check" points="64.5,62.2 67.5,65 72,59.5"/>
+</g>
+<g class="ponb-r3">
+  <rect class="ponb-box" x="62" y="78" width="12" height="12" rx="3"/>
+  <line class="ponb-line" x1="84" y1="84" x2="150" y2="84"/>
+  <polyline class="ponb-check" points="64.5,84.2 67.5,87 72,81.5"/>
+</g>
+<path class="ponb-cur" d="M0,0 L0,11 L3,8.5 L5.5,13.5 L7.5,12.5 L5,7.5 L8.5,7 Z"/>
+</svg>

@@ -1,0 +1,49 @@
+<svg class="gonb" viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="gonb-title gonb-desc">
+<title id="gonb-title">Geführtes Onboarding</title>
+<desc id="gonb-desc">Eine Checkliste, deren Häkchen sich nacheinander automatisch von oben nach unten setzen.</desc>
+<style>
+.gonb{--blue:#2456FF;--line:#e5e7eb;--ink:#111111;}
+.gonb .gonb-card{fill:#ffffff;stroke:var(--line);stroke-width:1.4;}
+.gonb .gonb-hd{fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linecap:round;opacity:.5;}
+.gonb .gonb-bar{fill:#f5f5f5;}
+.gonb .gonb-box{fill:#ffffff;stroke:var(--line);stroke-width:1.6;}
+.gonb .gonb-boxfill{fill:var(--blue);opacity:0;}
+.gonb .gonb-check{fill:none;stroke:#ffffff;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:14;stroke-dashoffset:14;}
+.gonb .gonb-r1 .gonb-boxfill,.gonb .gonb-r1 .gonb-check{animation:gonbFill 5s ease-in-out infinite;animation-delay:0s;}
+.gonb .gonb-r2 .gonb-boxfill,.gonb .gonb-r2 .gonb-check{animation:gonbFill 5s ease-in-out infinite;animation-delay:.8s;}
+.gonb .gonb-r3 .gonb-boxfill,.gonb .gonb-r3 .gonb-check{animation:gonbFill 5s ease-in-out infinite;animation-delay:1.6s;}
+.gonb .gonb-r4 .gonb-boxfill,.gonb .gonb-r4 .gonb-check{animation:gonbFill 5s ease-in-out infinite;animation-delay:2.4s;}
+@keyframes gonbFill{0%{opacity:0;stroke-dashoffset:14;}6%{opacity:1;}16%{opacity:1;stroke-dashoffset:0;}84%{opacity:1;stroke-dashoffset:0;}94%{opacity:0;stroke-dashoffset:14;}100%{opacity:0;stroke-dashoffset:14;}}
+@media (prefers-reduced-motion:reduce){
+.gonb .gonb-boxfill{opacity:1;animation:none;}
+.gonb .gonb-check{stroke-dashoffset:0;animation:none;}
+}
+</style>
+<rect class="gonb-card" x="46" y="16" width="128" height="88" rx="9"/>
+<line class="gonb-hd" x1="60" y1="26" x2="84" y2="26"/>
+<line class="gonb-hd" x1="60" y1="30.5" x2="76" y2="30.5"/>
+<g class="gonb-r1">
+<rect class="gonb-bar" x="78" y="40" width="82" height="9" rx="4.5"/>
+<rect class="gonb-box" x="60" y="39" width="11" height="11" rx="3"/>
+<rect class="gonb-boxfill" x="60" y="39" width="11" height="11" rx="3"/>
+<path class="gonb-check" d="M62.4 44.7l2.2 2.2 4.3-4.6"/>
+</g>
+<g class="gonb-r2">
+<rect class="gonb-bar" x="78" y="55" width="72" height="9" rx="4.5"/>
+<rect class="gonb-box" x="60" y="54" width="11" height="11" rx="3"/>
+<rect class="gonb-boxfill" x="60" y="54" width="11" height="11" rx="3"/>
+<path class="gonb-check" d="M62.4 59.7l2.2 2.2 4.3-4.6"/>
+</g>
+<g class="gonb-r3">
+<rect class="gonb-bar" x="78" y="70" width="82" height="9" rx="4.5"/>
+<rect class="gonb-box" x="60" y="69" width="11" height="11" rx="3"/>
+<rect class="gonb-boxfill" x="60" y="69" width="11" height="11" rx="3"/>
+<path class="gonb-check" d="M62.4 74.7l2.2 2.2 4.3-4.6"/>
+</g>
+<g class="gonb-r4">
+<rect class="gonb-bar" x="78" y="85" width="66" height="9" rx="4.5"/>
+<rect class="gonb-box" x="60" y="84" width="11" height="11" rx="3"/>
+<rect class="gonb-boxfill" x="60" y="84" width="11" height="11" rx="3"/>
+<path class="gonb-check" d="M62.4 89.7l2.2 2.2 4.3-4.6"/>
+</g>
+</svg>

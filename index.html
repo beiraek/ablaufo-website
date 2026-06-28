@@ -22,8 +22,9 @@
   <meta name="twitter:image" content="https://ablaufo.de/og-image.png">
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script>document.documentElement.classList.add('js')</script>
   <link rel="stylesheet" href="fonts.css?v=5">
-  <link rel="stylesheet" href="styles.css?v=9">
+  <link rel="stylesheet" href="styles.css?v=10">
 
   <script type="application/ld+json">
   {
@@ -53,10 +54,10 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "Was kostet eine Prozessautomatisierung für meine Steuerkanzlei?", "acceptedAnswer": { "@type": "Answer", "text": "Ich arbeite mit Festpreisen. Für den Aufbau zahlen Sie einmalig, danach kommt ein kleiner monatlicher Betrag für Hosting, Wartung und Support dazu. Der erste Blick auf Ihre Abläufe ist kostenlos, und Sie zahlen nur, wenn wir wirklich gemeinsam etwas umsetzen." } },
-      { "@type": "Question", "name": "Sind die Mandantendaten bei der Automatisierung sicher?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, das sind sie. Ihre Mandantendaten verlassen die EU nicht, denn ich nutze ausschließlich EU-Hosting auf deutschen Servern. Vor dem Start unterzeichne ich einen Auftragsverarbeitungsvertrag nach Art. 28 DSGVO und eine Verschwiegenheitsverpflichtung nach §203 StGB." } },
-      { "@type": "Question", "name": "Für welche Kanzleigröße ist ablaufo geeignet?", "acceptedAnswer": { "@type": "Answer", "text": "Es ist für jede Kanzleigröße geeignet. Ob Einzelkanzlei oder mehrere Standorte, ich automatisiere einzelne Prozesse und nicht die ganze Kanzlei auf einmal. Wir fangen klein an, mit einem Ablauf, der sofort Zeit spart." } },
-      { "@type": "Question", "name": "Arbeitet ablaufo mit DATEV zusammen?", "acceptedAnswer": { "@type": "Answer", "text": "DATEV bleibt Ihr zentrales System. Ich setze davor an, also beim Belegfluss, beim Nachfassen und beim Onboarding, und liefere sauber vorbereitete Daten, bevor sie in DATEV landen." } }
+      { "@type": "Question", "name": "Was kostet eine Prozessautomatisierung für meine Steuerkanzlei?", "acceptedAnswer": { "@type": "Answer", "text": "Ich arbeite mit festen Preisen: einmalig für den Aufbau, danach ein kleiner monatlicher Betrag für Hosting, Wartung und Support. Der erste Blick auf Ihre Abläufe ist kostenlos. Sie zahlen nur, wenn wir gemeinsam etwas umsetzen." } },
+      { "@type": "Question", "name": "Sind die Mandantendaten bei der Automatisierung sicher?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Ihre Mandantendaten verlassen die EU nicht, denn ich nutze ausschließlich EU-Hosting auf deutschen Servern. Vor dem Start unterzeichne ich einen Auftragsverarbeitungsvertrag nach Art. 28 DSGVO sowie eine Verschwiegenheitsverpflichtung nach § 203 StGB." } },
+      { "@type": "Question", "name": "Für welche Kanzleigröße ist ablaufo geeignet?", "acceptedAnswer": { "@type": "Answer", "text": "Für jede Größe. Ob Einzelkanzlei oder mehrere Standorte: Ich automatisiere einzelne Prozesse, nicht die ganze Kanzlei auf einmal. Wir starten klein, mit einem Ablauf, der sofort Zeit spart." } },
+      { "@type": "Question", "name": "Arbeitet ablaufo mit DATEV zusammen?", "acceptedAnswer": { "@type": "Answer", "text": "DATEV bleibt Ihr zentrales System. Ich setze davor an, beim Belegfluss, beim Nachfassen und beim Onboarding, und liefere sauber aufbereitete Daten, bevor sie in DATEV landen." } }
     ]
   }
   </script>
@@ -71,7 +72,7 @@
     <div class="container head-inner">
       <a href="#top" class="brand" aria-label="ablaufo Startseite"><img src="logo.svg?v=8" alt="ablaufo" class="brand-logo"></a>
       <!-- TEMP-VERSION: später entfernen -->
-      <span style="font:600 12px/1 monospace;color:#1b3fbf;letter-spacing:.05em">v9</span>
+      <span style="font:600 12px/1 monospace;color:#1b3fbf;letter-spacing:.05em">v10</span>
       <a href="#termin" class="btn btn-primary btn-sm" data-cal-link="ablaufo/gespraech" data-cal-namespace="gespraech" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","locale":"de"}'>Termin buchen</a>
     </div>
   </header>
@@ -82,13 +83,11 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow reveal"><span class="dot" aria-hidden="true"></span>Prozessautomatisierung · Regensburg</p>
           <h1 class="reveal">Ihre Kanzlei verliert jede Woche <span class="hl">Stunden</span> an Arbeit, die niemand von Hand erledigen müsste.</h1>
-          <p class="hero-rotate reveal"><span class="rotate-pre">Schluss mit:&nbsp;</span><span class="rotate" aria-hidden="true"><span>Belege sortieren</span><span>Mandanten hinterhertelefonieren</span><span>Onboarding-Listen abarbeiten</span></span></p>
-          <p class="lead reveal">Ich finde diese Zeitfresser in Ihrer Kanzlei und baue Ihnen eine Automatisierung, die zu Ihren Abläufen passt.</p>
+          <p class="hero-rotate reveal"><span class="rotate-pre">Nie wieder:&nbsp;</span><span class="rotate" aria-hidden="true"><span>Belege von Hand sortieren</span><span>Mandanten hinterhertelefonieren</span><span>Onboarding-Listen abarbeiten</span></span></p>
+          <p class="lead reveal">Ich finde die wiederkehrenden Zeitfresser in Ihrer Kanzlei und baue Ihnen eine Automatisierung, die genau zu Ihren Abläufen passt.</p>
           <div class="hero-cta reveal">
-            <a href="#termin" class="btn btn-primary" data-cal-link="ablaufo/gespraech" data-cal-namespace="gespraech" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","locale":"de"}'>Zeitfresser finden, kostenlos&nbsp;→</a>
-            <a href="#leistungen" class="btn btn-outline">Was ich automatisiere</a>
+            <a href="#termin" class="btn btn-primary btn-lg" data-cal-link="ablaufo/gespraech" data-cal-namespace="gespraech" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","locale":"de"}'>Kostenloses Erstgespräch&nbsp;→</a>
           </div>
         </div>
 
@@ -179,7 +178,7 @@
             <circle class="dot d1" r="3.5"/><circle class="dot d2" r="3.5"/><circle class="dot d3" r="3.5"/><circle class="dot d4" r="3.5"/>
             <circle class="dot o1" r="3.5"/><circle class="dot o2" r="3.5"/><circle class="dot o3" r="3.5"/>
           </svg>
-          <p class="flow-caption">Belege rein, fertig sortiert raus – automatisch.</p>
+          <p class="flow-caption">Eingehende Belege werden automatisch sortiert und abgelegt.</p>
         </div>
       </div>
     </section>
@@ -199,27 +198,27 @@
       <div class="container">
         <div class="sec-head reveal">
           <p class="eyebrow">Das Problem</p>
-          <h2 id="problem-title">Die Arbeit, die keiner sieht und die trotzdem jeden Tag Zeit kostet</h2>
-          <p class="sec-sub">Die Stunden gehen nicht in der Beratung verloren, sondern in den immer gleichen Handgriffen drumherum.</p>
+          <h2 id="problem-title">Die unsichtbare Arbeit, die Ihre Kanzlei täglich Zeit kostet.</h2>
+          <p class="sec-sub">Die meisten Stunden verschwinden nicht in der Beratung, sondern in den immer gleichen Handgriffen drumherum.</p>
         </div>
         <ul class="cards">
           <li class="card card--problem reveal">
-            <div class="card-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></div>
+            <div class="card-gfx"><img src="graphics/pchaos.svg" alt="" aria-hidden="true" loading="lazy"></div>
             <h3>Belege im Format-Chaos</h3>
-            <p>Belege kommen per Mail, als Foto, als PDF und auf Papier. Jemand muss sie von Hand sortieren, benennen und hochladen, und das jeden Tag aufs Neue.</p>
+            <p>Belege erreichen Sie per Mail, als Foto, als PDF oder auf Papier. Jemand muss sie von Hand sortieren, benennen und hochladen, jeden Tag aufs Neue.</p>
           </li>
           <li class="card card--problem reveal">
-            <div class="card-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div class="card-gfx"><img src="graphics/pnach.svg" alt="" aria-hidden="true" loading="lazy"></div>
             <h3>Das ewige Nachfassen</h3>
-            <p>Fehlt ein Beleg, fängt das Hinterhertelefonieren an, und das zieht sich oft hin, bis endlich alles zusammen ist.</p>
+            <p>Fehlt ein Beleg, beginnt das Hinterhertelefonieren. Das kostet Zeit und zieht sich oft über Tage, bis endlich alles zusammen ist.</p>
           </li>
           <li class="card card--problem reveal">
-            <div class="card-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></div>
+            <div class="card-gfx"><img src="graphics/ponb.svg" alt="" aria-hidden="true" loading="lazy"></div>
             <h3>Onboarding von Hand</h3>
-            <p>Bei jedem neuen Mandanten gehen Sie wieder dieselbe Checkliste und dieselben Formulare durch, jedes Mal manuell von vorn.</p>
+            <p>Bei jedem neuen Mandanten dieselbe Checkliste, dieselben Formulare, dieselben Rückfragen. Jedes Mal von vorn.</p>
           </li>
         </ul>
-        <p class="problem-punch reveal">Und das wiederholt sich Woche für Woche, das ganze Jahr über. Diese Zeit fehlt dann für die Mandanten.</p>
+        <p class="problem-punch reveal">Das wiederholt sich Woche für Woche, das ganze Jahr über. Genau diese Zeit fehlt am Ende für Ihre Mandanten.</p>
       </div>
     </section>
 
@@ -228,13 +227,13 @@
       <div class="container">
         <div class="sec-head reveal">
           <p class="eyebrow">Die Zahlen</p>
-          <h2 id="studien-title">Diese Routine lässt sich automatisieren. Das spart Ihrer Kanzlei jede Woche Stunden.</h2>
-          <p class="sec-sub">Was passiert, wenn Kanzleien ihre Routine automatisieren, zeigt eine aktuelle Studie:</p>
+          <h2 id="studien-title">Wer die Routine automatisiert, gewinnt messbar Zeit zurück.</h2>
+          <p class="sec-sub">Eine aktuelle Studie zeigt, was Kanzleien gewinnen, die ihre wiederkehrenden Abläufe automatisieren:</p>
         </div>
         <div class="stats">
           <div class="stat reveal">
             <span class="stat-num" data-to="55" data-suffix="&#8201;%">55&#8201;%</span>
-            <p class="stat-label">mehr Mandanten betreuen Kanzleien, die ihre Routine automatisieren</p>
+            <p class="stat-label">mehr Mandanten betreuen Kanzleien mit automatisierter Routine</p>
           </div>
           <div class="stat reveal">
             <span class="stat-num" data-to="7.5" data-decimals="1" data-suffix="&#8201;Tage">7,5&#8201;Tage</span>
@@ -242,7 +241,7 @@
           </div>
           <div class="stat reveal">
             <span class="stat-num" data-to="8.5" data-decimals="1" data-suffix="&#8201;%">8,5&#8201;%</span>
-            <p class="stat-label">weniger Zeit fließt in Routine-Verwaltung statt in Beratung</p>
+            <p class="stat-label">weniger Zeit fließt in die Verwaltung statt in die Beratung</p>
           </div>
         </div>
         <p class="stat-source reveal">Quelle: Choi (Stanford GSB) &amp; Xie (MIT), Studie „Human&nbsp;+&nbsp;AI in Accounting", 2025. <a href="https://www.gsb.stanford.edu/faculty-research/working-papers/human-ai-accounting-early-evidence-field" target="_blank" rel="nofollow noopener">Zur Studie&nbsp;↗</a></p>
@@ -254,24 +253,24 @@
       <div class="container">
         <div class="sec-head reveal">
           <p class="eyebrow">Die Lösung</p>
-          <h2 id="leistungen-title">Individuell gebaut für Ihre Abläufe</h2>
-          <p class="sec-sub">Ich baue keine Standardlösung, sondern sehe mir Ihre Prozesse an und entwickle etwas, das Ihre Kanzlei wirklich entlastet.</p>
+          <h2 id="leistungen-title">Individuell gebaut, genau für Ihre Abläufe.</h2>
+          <p class="sec-sub">Ich liefere keine Lösung von der Stange. Ich sehe mir Ihre Prozesse an und entwickle etwas, das Ihre Kanzlei spürbar entlastet.</p>
         </div>
         <ul class="cards">
           <li class="card reveal">
-            <div class="card-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg></div>
+            <div class="card-gfx"><img src="graphics/belegeingang.svg" alt="" aria-hidden="true" loading="lazy"></div>
             <h3>Belegeingang</h3>
-            <p>Ich richte einen Eingang ein, der Belege automatisch annimmt, sortiert und für DATEV vorbereitet, egal in welchem Format sie ankommen. So muss niemand mehr jeden Beleg von Hand bearbeiten.</p>
+            <p>Ihre Belege werden automatisch angenommen, sortiert und für DATEV vorbereitet, egal in welchem Format sie ankommen. Niemand muss sie noch von Hand bearbeiten.</p>
           </li>
           <li class="card reveal">
-            <div class="card-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+            <div class="card-gfx"><img src="graphics/nachfassen.svg" alt="" aria-hidden="true" loading="lazy"></div>
             <h3>Nachfassen</h3>
-            <p>Ich baue einen Ablauf, der fehlende Unterlagen automatisch und höflich nachfasst, bis alles da ist. Niemand muss mehr selbst zum Hörer greifen.</p>
+            <p>Fehlende Unterlagen werden automatisch und höflich nachgefasst, bis alles vollständig ist. Niemand muss mehr zum Hörer greifen.</p>
           </li>
           <li class="card reveal">
-            <div class="card-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg></div>
+            <div class="card-gfx"><img src="graphics/onboarding.svg" alt="" aria-hidden="true" loading="lazy"></div>
             <h3>Onboarding</h3>
-            <p>Ich baue Ihr Mandanten-Onboarding als geführten Ablauf, bei dem jeder neue Mandant vollständig erfasst wird, ganz ohne manuelle Checkliste und ohne dass etwas vergessen wird.</p>
+            <p>Neue Mandanten durchlaufen einen geführten Ablauf, der alle Angaben vollständig erfasst. Ohne Checkliste von Hand und ohne vergessene Daten.</p>
           </li>
         </ul>
       </div>
@@ -284,23 +283,23 @@
         <div class="sec-head reveal">
           <p class="eyebrow">Der Ablauf</p>
           <h2 id="ablauf-title">In drei Schritten zur ersten Automatisierung</h2>
-          <p class="sec-sub">Es ist kein großes Projekt und für Sie mit keinem Risiko verbunden. Wir fangen klein an, mit einem einzelnen Ablauf, der sofort etwas bringt.</p>
+          <p class="sec-sub">Kein großes Projekt und für Sie ohne Risiko. Wir starten klein, mit einem einzelnen Ablauf, der sofort spürbar entlastet.</p>
         </div>
         <ol class="steps">
           <li class="step reveal">
             <span class="step-num">1</span>
             <h3>Kostenloser Prozess-Check</h3>
-            <p>In etwa 30 Minuten sehe ich mir Ihre Abläufe an und sage Ihnen ehrlich, wo sich Zeit sparen lässt. Das ist für Sie unverbindlich.</p>
+            <p>In rund 30 Minuten sehe ich mir Ihre Abläufe an und sage Ihnen ehrlich, wo sich Zeit sparen lässt. Völlig unverbindlich.</p>
           </li>
           <li class="step reveal">
             <span class="step-num">2</span>
             <h3>Mini-Demo Ihres Falls</h3>
-            <p>Ich baue eine kleine, funktionierende Version für Ihren konkreten Fall, damit Sie das Ergebnis sehen, bevor Sie sich entscheiden.</p>
+            <p>Ich baue eine kleine, funktionierende Version für Ihren konkreten Fall. So sehen Sie das Ergebnis, bevor Sie sich entscheiden.</p>
           </li>
           <li class="step reveal">
             <span class="step-num">3</span>
             <h3>Festpreis-Angebot</h3>
-            <p>Sie bekommen einen klaren Festpreis für eine klar umrissene erste Stufe und können in Ruhe entscheiden.</p>
+            <p>Sie bekommen einen festen Preis für eine klar umrissene erste Stufe und entscheiden in Ruhe.</p>
           </li>
         </ol>
       </div>
@@ -312,22 +311,23 @@
         <div class="promise-inner reveal">
           <p class="eyebrow">Mein Versprechen</p>
           <h2 id="promise-title">Sie zahlen erst, wenn Sie <span class="hl">überzeugt sind</span>.</h2>
-          <p class="promise-lead">Ich gehe in Vorleistung. Ich baue Ihre Automatisierung an Ihrem echten Fall und zeige Ihnen das fertige Ergebnis, bevor Sie einen Cent zahlen. Wenn es nicht funktioniert, zahlen Sie nichts, und das Risiko liegt damit allein bei mir.</p>
+          <p class="promise-lead">Ich gehe in Vorleistung. Ich baue Ihre Automatisierung an Ihrem echten Fall und zeige Ihnen das fertige Ergebnis, bevor Sie einen Cent zahlen. Funktioniert es nicht wie versprochen, zahlen Sie nichts. Das Risiko trage allein ich.</p>
+          <div class="promise-gfx reveal"><img src="graphics/promise.svg" alt="" aria-hidden="true" loading="lazy"></div>
           <div class="promise-points">
             <div class="promise-point">
               <div class="promise-point-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
               <h3>Erst sehen, dann zahlen</h3>
-              <p>Sie sehen die Lösung an Ihrem echten Prozess und nicht an einem Beispiel.</p>
+              <p>Sie erleben Ihre Lösung an Ihrem echten Prozess, nicht an einem Beispiel.</p>
             </div>
             <div class="promise-point">
               <div class="promise-point-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
               <h3>Kein Risiko für Sie</h3>
-              <p>Wenn die erste Stufe nicht hält, was ich verspreche, zahlen Sie nichts.</p>
+              <p>Hält die erste Stufe nicht, was ich verspreche, zahlen Sie nichts.</p>
             </div>
             <div class="promise-point">
               <div class="promise-point-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div>
               <h3>Qualität vor Abschluss</h3>
-              <p>Über den Preis reden wir erst, wenn Sie das Ergebnis gesehen haben.</p>
+              <p>Über den Preis sprechen wir erst, wenn das Ergebnis steht.</p>
             </div>
           </div>
           <a href="#termin" class="btn btn-light btn-lg" data-cal-link="ablaufo/gespraech" data-cal-namespace="gespraech" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","locale":"de"}'>Unverbindliches Erstgespräch&nbsp;→</a>
@@ -343,10 +343,10 @@
           <h2 id="faq-title">Häufige Fragen</h2>
         </div>
         <div class="faq">
-          <details class="reveal"><summary>Was kostet eine Prozessautomatisierung?</summary><p>Ich arbeite mit Festpreisen. Für den Aufbau zahlen Sie einmalig, danach kommt ein kleiner monatlicher Betrag für Hosting, Wartung und Support dazu. Der erste Blick auf Ihre Abläufe ist kostenlos, und Sie zahlen nur, wenn wir wirklich gemeinsam etwas umsetzen.</p></details>
-          <details class="reveal"><summary>Sind die Mandantendaten bei der Automatisierung sicher?</summary><p>Ja, das sind sie. Ihre Mandantendaten verlassen die EU nicht, denn ich nutze ausschließlich EU-Hosting auf deutschen Servern. Vor dem Start unterzeichne ich einen Auftragsverarbeitungsvertrag nach Art. 28 DSGVO und eine Verschwiegenheitsverpflichtung nach §203 StGB.</p></details>
-          <details class="reveal"><summary>Für welche Kanzleigröße ist ablaufo geeignet?</summary><p>Es ist für jede Kanzleigröße geeignet. Ob Einzelkanzlei oder mehrere Standorte, ich automatisiere einzelne Prozesse und nicht die ganze Kanzlei auf einmal. Wir fangen klein an, mit einem Ablauf, der sofort Zeit spart.</p></details>
-          <details class="reveal"><summary>Arbeitet ablaufo mit DATEV zusammen?</summary><p>DATEV bleibt Ihr zentrales System. Ich setze davor an, also beim Belegfluss, beim Nachfassen und beim Onboarding, und liefere sauber vorbereitete Daten, bevor sie in DATEV landen.</p></details>
+          <details class="reveal"><summary>Was kostet eine Prozessautomatisierung?</summary><p>Ich arbeite mit festen Preisen: einmalig für den Aufbau, danach ein kleiner monatlicher Betrag für Hosting, Wartung und Support. Der erste Blick auf Ihre Abläufe ist kostenlos. Sie zahlen nur, wenn wir gemeinsam etwas umsetzen.</p></details>
+          <details class="reveal"><summary>Sind die Mandantendaten bei der Automatisierung sicher?</summary><p>Ja. Ihre Mandantendaten verlassen die EU nicht, denn ich nutze ausschließlich EU-Hosting auf deutschen Servern. Vor dem Start unterzeichne ich einen Auftragsverarbeitungsvertrag nach Art. 28 DSGVO sowie eine Verschwiegenheitsverpflichtung nach § 203 StGB.</p></details>
+          <details class="reveal"><summary>Für welche Kanzleigröße ist ablaufo geeignet?</summary><p>Für jede Größe. Ob Einzelkanzlei oder mehrere Standorte: Ich automatisiere einzelne Prozesse, nicht die ganze Kanzlei auf einmal. Wir starten klein, mit einem Ablauf, der sofort Zeit spart.</p></details>
+          <details class="reveal"><summary>Arbeitet ablaufo mit DATEV zusammen?</summary><p>DATEV bleibt Ihr zentrales System. Ich setze davor an, beim Belegfluss, beim Nachfassen und beim Onboarding, und liefere sauber aufbereitete Daten, bevor sie in DATEV landen.</p></details>
         </div>
       </div>
     </section>
@@ -356,8 +356,8 @@
       <div class="container">
         <div class="sec-head reveal">
           <p class="eyebrow">Termin buchen</p>
-          <h2 id="booking-title">30-Minuten-Gespräch vereinbaren</h2>
-          <p class="sec-sub">Das Gespräch ist kostenlos und unverbindlich. Sie wählen einfach einen freien Termin, ganz ohne Formular und langes Hin und Her.</p>
+          <h2 id="booking-title">Buchen Sie Ihr kostenloses Erstgespräch.</h2>
+          <p class="sec-sub">Das Gespräch ist kostenlos und unverbindlich. Wählen Sie einfach einen freien Termin, ganz ohne Formular und ohne langes Hin und Her.</p>
         </div>
         <div class="reveal" style="text-align:center;padding:var(--sp-lg) 0">
           <a class="btn btn-primary btn-lg" data-cal-link="ablaufo/gespraech" data-cal-namespace="gespraech" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","locale":"de"}'>Termin auswählen&nbsp;→</a>
@@ -418,50 +418,38 @@
     })();
   </script>
 
+  <!-- GSAP + ScrollTrigger: scroll-getriebenes Reveal -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
   <script>
     (function () {
       var els = document.querySelectorAll('.reveal');
-      if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        els.forEach(function (el) { el.classList.add('is-visible'); }); return;
+      // Fallback: GSAP nicht geladen -> alles sofort sichtbar (graceful)
+      if (!window.gsap || !window.ScrollTrigger) {
+        els.forEach(function (el) { el.classList.add('is-visible'); });
+        return;
       }
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
-      }, { threshold: 0.12 });
-      els.forEach(function (el) { io.observe(el); });
-    })();
-  </script>
-
-  <!-- Icon-Draw-on: Strich-Icons zeichnen sich beim Reinscrollen -->
-  <script>
-    (function () {
-      if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      var icons = document.querySelectorAll('.card-ic svg, .promise-point-ic svg');
-      if (!icons.length) return;
-      var SEL = 'path, polyline, line, circle, rect';
-      icons.forEach(function (svg) {
-        svg.querySelectorAll(SEL).forEach(function (s) {
-          var len = 0;
-          try { len = s.getTotalLength(); } catch (e) { len = 0; }
-          if (!len) return;
-          s.style.strokeDasharray = len;
-          s.style.strokeDashoffset = len;
-          s.style.transition = 'stroke-dashoffset .6s ease';
+      gsap.registerPlugin(ScrollTrigger);
+      function show(el) { el.classList.add('is-visible'); gsap.set(el, { autoAlpha: 1, y: 0 }); }
+      function animateIn(el) { el.classList.add('is-visible'); gsap.to(el, { autoAlpha: 1, y: 0, duration: 0.6, ease: 'power2.out', overwrite: true }); }
+      var mm = gsap.matchMedia();
+      mm.add('(prefers-reduced-motion: no-preference)', function () {
+        gsap.utils.toArray('.reveal').forEach(function (el) {
+          gsap.set(el, { autoAlpha: 0, y: 16 });
+          // Bereits im Startbild sichtbare Elemente sofort zeigen (ohne rAF-Abhängigkeit) ...
+          if (el.getBoundingClientRect().top < window.innerHeight * 0.95) {
+            show(el);
+          } else {
+            // ... der Rest wird beim Reinscrollen sanft eingeblendet
+            ScrollTrigger.create({ trigger: el, start: 'top 90%', once: true, onEnter: function () { animateIn(el); } });
+          }
         });
+        ScrollTrigger.refresh();
       });
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (!e.isIntersecting) return;
-          var i = 0;
-          e.target.querySelectorAll(SEL).forEach(function (s) {
-            if (!s.style.strokeDashoffset) return;
-            s.style.transitionDelay = (i * 0.08) + 's';
-            requestAnimationFrame(function () { s.style.strokeDashoffset = '0'; });
-            i++;
-          });
-          io.unobserve(e.target);
-        });
-      }, { threshold: 0.3 });
-      icons.forEach(function (svg) { io.observe(svg); });
+      mm.add('(prefers-reduced-motion: reduce)', function () {
+        els.forEach(function (el) { el.classList.add('is-visible'); });
+        gsap.set('.reveal', { clearProps: 'all' });
+      });
     })();
   </script>
 
