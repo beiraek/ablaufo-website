@@ -68,8 +68,10 @@
   <!-- STICKY HEADER -->
   <header class="site-head" id="top">
     <div class="container head-inner">
-      <a href="#top" class="brand" aria-label="ablaufo Startseite">ablaufo<span class="brand-dot" aria-hidden="true"></span></a>
-      <a href="mailto:bakir@ablaufo.de" class="btn btn-primary btn-sm">Erstgespräch</a>
+      <a href="#top" class="brand" aria-label="ablaufo Startseite"><img src="logo.svg" alt="ablaufo" class="brand-logo"></a>
+      <!-- TEMP-VERSION: später entfernen -->
+      <span style="font:600 12px/1 monospace;color:#1b3fbf;letter-spacing:.05em">v1</span>
+      <a href="#termin" class="btn btn-primary btn-sm" data-cal-link="ablaufo/gespraech" data-cal-namespace="gespraech" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","locale":"de"}'>Termin buchen</a>
     </div>
   </header>
 
@@ -80,47 +82,36 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="eyebrow reveal"><span class="dot" aria-hidden="true"></span>Prozessautomatisierung · Regensburg</p>
-          <h1 class="reveal">Automatisierung für Steuerkanzleien, die <span class="hl">Zeit zurückgibt</span>.</h1>
-          <p class="lead reveal">Ich automatisiere Belegeingang, Mandanten-Nachfassen und Onboarding – DSGVO-konform, mit EU-Hosting. Keine Massenware, sondern eine Lösung, die zu Ihrer Kanzlei passt.</p>
+          <h1 class="reveal">Ihre Kanzlei verliert jede Woche <span class="hl">Stunden</span> an Arbeit, die niemand von Hand machen müsste.</h1>
+          <p class="hero-rotate reveal"><span class="rotate-pre">Schluss mit:&nbsp;</span><span class="rotate" aria-hidden="true"><span>Belege von Hand sortieren</span><span>Mandanten hinterhertelefonieren</span><span>Onboarding-Listen abarbeiten</span></span></p>
+          <p class="lead reveal">Ich finde diese Zeitfresser in Ihrer Kanzlei und baue Ihnen eine Automatisierung, die genau zu Ihren Abläufen passt – DSGVO-konform, mit EU-Hosting. Keine Lösung von der Stange, sondern für Sie gebaut.</p>
           <div class="hero-cta reveal">
-            <a href="mailto:bakir@ablaufo.de" class="btn btn-primary">Kostenloses Erstgespräch&nbsp;→</a>
+            <a href="#termin" class="btn btn-primary" data-cal-link="ablaufo/gespraech" data-cal-namespace="gespraech" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","locale":"de"}'>Zeitfresser finden – kostenlos&nbsp;→</a>
             <a href="#leistungen" class="btn btn-outline">Was ich automatisiere</a>
           </div>
           <p class="risk reveal">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Erste Stufe zum Festpreis – funktioniert sie nicht wie versprochen, zahlen Sie nichts.
+            Sie zahlen erst, wenn Sie das Ergebnis sehen.
           </p>
         </div>
 
-        <!-- ABLAUF-DIAGRAMM -->
-        <div class="hero-visual reveal" role="img" aria-label="Ablauf: Belege gehen ein, ablaufo automatisiert die Verarbeitung, die Daten landen sauber in DATEV.">
-          <div class="flow">
-            <div class="flow-node">
-              <div class="flow-ic">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>
-              </div>
-              <span class="flow-label">Belege</span>
+        <!-- ZEIT-VISUAL: Routine raus, Zeit zurück -->
+        <div class="hero-visual reveal" role="img" aria-label="Visualisierung einer Arbeitswoche von Montag bis Freitag: wiederkehrende Routineaufgaben werden automatisiert und geben Zeit für Mandanten frei.">
+          <div class="week">
+            <div class="week-head" aria-hidden="true"><span>Mo</span><span>Di</span><span>Mi</span><span>Do</span><span>Fr</span></div>
+            <div class="week-grid" aria-hidden="true">
+              <span class="cell"></span><span class="cell busy" style="animation-delay:0s"></span><span class="cell"></span><span class="cell busy" style="animation-delay:.2s"></span><span class="cell"></span>
+              <span class="cell"></span><span class="cell"></span><span class="cell busy" style="animation-delay:.4s"></span><span class="cell"></span><span class="cell"></span>
+              <span class="cell busy" style="animation-delay:.6s"></span><span class="cell"></span><span class="cell"></span><span class="cell"></span><span class="cell busy" style="animation-delay:.6s"></span>
+              <span class="cell"></span><span class="cell busy" style="animation-delay:.9s"></span><span class="cell"></span><span class="cell busy" style="animation-delay:.9s"></span><span class="cell"></span>
+              <span class="cell"></span><span class="cell"></span><span class="cell busy" style="animation-delay:1.2s"></span><span class="cell"></span><span class="cell"></span>
             </div>
-
-            <div class="flow-line" aria-hidden="true"><span class="flow-dot"></span></div>
-
-            <div class="flow-node flow-node--core">
-              <div class="flow-ic flow-ic--core">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-              </div>
-              <span class="flow-label">ablaufo</span>
-            </div>
-
-            <div class="flow-line" aria-hidden="true"><span class="flow-dot flow-dot--2"></span></div>
-
-            <div class="flow-node">
-              <div class="flow-ic flow-ic--done">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              </div>
-              <span class="flow-label">DATEV</span>
+            <div class="week-legend" aria-hidden="true">
+              <span><i class="dot-busy"></i>Routineaufgaben</span>
+              <span><i class="dot-free"></i>Zeit für Mandanten</span>
             </div>
           </div>
-          <p class="flow-caption">Belege rein – sauber vorbereitet raus. Vollautomatisch.</p>
+          <p class="flow-caption">Routine raus – Zeit zurück. Woche für Woche.</p>
         </div>
       </div>
     </section>
@@ -135,31 +126,107 @@
       </div>
     </section>
 
-    <!-- LEISTUNGEN -->
-    <section id="leistungen" class="section" aria-labelledby="leistungen-title">
+    <!-- PROBLEM: Zeitfresser bewusst machen -->
+    <section class="section section--alt" aria-labelledby="problem-title">
       <div class="container">
         <div class="sec-head reveal">
-          <p class="eyebrow">Leistungen</p>
-          <h2 id="leistungen-title">Was ich automatisiere</h2>
-          <p class="sec-sub">Drei wiederkehrende Abläufe, die in fast jeder Kanzlei Zeit kosten – und sich sauber automatisieren lassen.</p>
+          <p class="eyebrow">Kommt Ihnen das bekannt vor?</p>
+          <h2 id="problem-title">Die Arbeit, die keiner sieht – und die trotzdem jeden Tag Zeit frisst</h2>
+          <p class="sec-sub">Nicht die Beratung kostet Sie die Stunden. Es sind die immer gleichen Handgriffe drumherum.</p>
+        </div>
+        <ul class="cards">
+          <li class="card card--problem reveal">
+            <div class="card-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></div>
+            <h3>Belege im Format-Chaos</h3>
+            <p>Sie kommen per Mail, als Foto, PDF und auf Papier. Jemand sortiert, benennt und lädt sie von Hand hoch – jeden Tag aufs Neue.</p>
+          </li>
+          <li class="card card--problem reveal">
+            <div class="card-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <h3>Das ewige Nachfassen</h3>
+            <p>Fehlt ein Beleg, beginnt das Hinterhertelefonieren und E-Mail-Schreiben. Wieder. Und wieder. Bis irgendwann alles da ist.</p>
+          </li>
+          <li class="card card--problem reveal">
+            <div class="card-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></div>
+            <h3>Onboarding von Hand</h3>
+            <p>Jeder neue Mandant: dieselbe Checkliste, dieselben Formulare, dieselben Stammdaten – jedes Mal manuell von vorn.</p>
+          </li>
+        </ul>
+        <p class="problem-punch reveal">Das wiederholt sich. Jede Woche, das ganze Jahr. Es braucht kein Fachwissen – aber es frisst die Zeit, die für Mandanten und Wachstum fehlt.</p>
+      </div>
+    </section>
+
+    <!-- STUDIEN / BELEG -->
+    <section class="section" aria-labelledby="studien-title">
+      <div class="container">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Die Zahlen dahinter</p>
+          <h2 id="studien-title">Automatisierung ist kein Nice-to-have. Es ist gewonnene Zeit.</h2>
+          <p class="sec-sub">Was passiert, wenn Kanzleien ihre Routine automatisieren – belegt durch eine aktuelle Studie:</p>
+        </div>
+        <div class="stats">
+          <div class="stat reveal">
+            <span class="stat-num" data-to="55" data-suffix="&#8201;%">55&#8201;%</span>
+            <p class="stat-label">mehr Mandanten betreuen Kanzleien, die ihre Routine automatisieren</p>
+          </div>
+          <div class="stat reveal">
+            <span class="stat-num" data-to="7.5" data-decimals="1" data-suffix="&#8201;Tage">7,5&#8201;Tage</span>
+            <p class="stat-label">schneller sind ihre Monatsabschlüsse fertig</p>
+          </div>
+          <div class="stat reveal">
+            <span class="stat-num" data-to="8.5" data-decimals="1" data-suffix="&#8201;%">8,5&#8201;%</span>
+            <p class="stat-label">weniger Zeit fließt in Routine-Verwaltung statt in Beratung</p>
+          </div>
+        </div>
+        <p class="stat-source reveal">Quelle: Choi (Stanford GSB) &amp; Xie (MIT), Studie „Human&nbsp;+&nbsp;AI in Accounting", 2025. <a href="https://www.gsb.stanford.edu/faculty-research/working-papers/human-ai-accounting-early-evidence-field" target="_blank" rel="nofollow noopener">Zur Studie&nbsp;↗</a></p>
+        <p class="problem-punch reveal">Stellen Sie sich vor, diese Zeit gehört wieder Ihnen – für Beratung, neue Mandanten und einen pünktlichen Feierabend.</p>
+      </div>
+    </section>
+
+    <!-- LEISTUNGEN -->
+    <section id="leistungen" class="section section--alt" aria-labelledby="leistungen-title">
+      <div class="container">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Das automatisiere ich</p>
+          <h2 id="leistungen-title">Individuell gebaut – für genau Ihre Abläufe</h2>
+          <p class="sec-sub">Keine Lösung von der Stange. Ich sehe mir Ihre Prozesse an und baue, was Ihre Kanzlei wirklich entlastet.</p>
         </div>
         <ul class="cards">
           <li class="card reveal">
             <div class="card-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg></div>
-            <h3>Belegeingang der Mandanten</h3>
-            <p>Belege kommen ungeordnet per Mail und in jedem erdenklichen Format. Ich automatisiere den Eingang, sodass niemand mehr von Hand sortiert – sauber vorbereitet, bevor es in DATEV landet.</p>
+            <h3>Belegeingang</h3>
+            <p>Ich baue Ihnen einen Eingang, der Belege automatisch annimmt, sortiert und sauber für DATEV vorbereitet – egal in welchem Format sie kommen. Bevor jemand von Hand anfasst.</p>
           </li>
           <li class="card reveal">
             <div class="card-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
-            <h3>Nachfassen bei fehlenden Unterlagen</h3>
-            <p>Fehlende Belege bremsen jede Kanzlei. Statt hinterherzutelefonieren erinnert ein automatischer Ablauf Ihre Mandanten zuverlässig und höflich – so lange, bis alles vollständig ist.</p>
+            <h3>Nachfassen</h3>
+            <p>Ich richte Ihnen einen Ablauf ein, der fehlende Unterlagen automatisch und höflich nachfasst – so lange, bis alles da ist. Ohne dass jemand zum Hörer greift.</p>
           </li>
           <li class="card reveal">
             <div class="card-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg></div>
-            <h3>Onboarding neuer Mandanten</h3>
-            <p>Das Anlegen neuer Mandanten ist Routine mit vielen Schritten. Ich bündle sie zu einem geführten Ablauf – schneller, vollständig und ohne vergessene Angaben.</p>
+            <h3>Onboarding</h3>
+            <p>Ich baue Ihr Mandanten-Onboarding als geführten Ablauf – jeder Neue vollständig erfasst, ohne manuelle Checkliste und ohne vergessene Angaben.</p>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <!-- WER DAHINTER STEHT -->
+    <section class="section" aria-labelledby="bio-title">
+      <div class="container">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Wer dahinter steht</p>
+          <h2 id="bio-title">ablaufo, das bin ich – Burak Bakir.</h2>
+        </div>
+        <div class="bio reveal">
+          <div class="bio-photo" aria-hidden="true">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span>Foto folgt</span>
+          </div>
+          <div class="bio-text">
+            <p>Mein Hintergrund liegt in der Automatisierung von Geschäftsprozessen im Enterprise-Umfeld. Diese Erfahrung bringe ich zu Steuerkanzleien in Regensburg und der Oberpfalz – persönlich, ohne Overhead und ohne Massenware.</p>
+            <p>Jede Lösung baue ich individuell für Ihre Kanzlei. EU-Hosting auf deutschen Servern, ein Auftragsverarbeitungsvertrag (AVV nach Art.&nbsp;28 DSGVO) und Verschwiegenheit nach §203&nbsp;StGB sind selbstverständlich. Ihre Mandantendaten verlassen die EU nicht.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -167,7 +234,7 @@
     <section class="section section--alt" aria-labelledby="ablauf-title">
       <div class="container">
         <div class="sec-head reveal">
-          <p class="eyebrow">So läuft's</p>
+          <p class="eyebrow">So einfach starten</p>
           <h2 id="ablauf-title">In drei Schritten zur ersten Automatisierung</h2>
           <p class="sec-sub">Kein langes Projekt, kein Risiko. Wir fangen klein an – bei einem Ablauf, der sofort Wirkung zeigt.</p>
         </div>
@@ -191,22 +258,37 @@
       </div>
     </section>
 
-    <!-- WARUM ABLAUFO -->
-    <section class="section" aria-labelledby="why-title">
+    <!-- VERSPRECHEN / VORLEISTUNG (dunkler Höhepunkt) -->
+    <section class="section promise" aria-labelledby="promise-title">
       <div class="container">
-        <div class="why reveal">
-          <p class="eyebrow">Warum ablaufo</p>
-          <h2 id="why-title">Datenschutz ist nicht das Hindernis.<br>Er ist der Grund, mich zu nehmen.</h2>
-          <div class="why-cols">
-            <p>Mein Hintergrund liegt in der Automatisierung von Geschäftsprozessen im Enterprise-Umfeld. Diese Erfahrung übersetze ich direkt in die Realität einer Steuerkanzlei in Regensburg und der Oberpfalz – ohne Overhead, ohne Massenware.</p>
-            <p>EU-Hosting auf deutschen Servern, ein Auftragsverarbeitungsvertrag (AVV nach Art.&nbsp;28 DSGVO) und eine Verschwiegenheitsverpflichtung nach §203&nbsp;StGB werden vor dem ersten Schritt unterschrieben. Ihre Mandantendaten verlassen die EU nicht.</p>
+        <div class="promise-inner reveal">
+          <p class="eyebrow">Mein Versprechen</p>
+          <h2 id="promise-title">Sie zahlen erst, wenn Sie <span class="hl">überzeugt sind</span>.</h2>
+          <p class="promise-lead">Ich gehe komplett in Vorleistung. Ich baue Ihre Automatisierung an Ihrem eigenen Fall und zeige Ihnen das fertige Ergebnis – bevor Sie einen Cent zahlen. Erst wenn Sie sehen, dass es funktioniert, sprechen wir über den Preis. So ist am Ende niemand enttäuscht, und das Risiko trage allein ich.</p>
+          <div class="promise-points">
+            <div class="promise-point">
+              <div class="promise-point-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+              <h3>Erst sehen, dann zahlen</h3>
+              <p>Sie erleben Ihre Lösung live an Ihrem echten Prozess – nicht an einem Beispiel.</p>
+            </div>
+            <div class="promise-point">
+              <div class="promise-point-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+              <h3>Kein Risiko für Sie</h3>
+              <p>Funktioniert die erste Stufe nicht wie versprochen, zahlen Sie nichts.</p>
+            </div>
+            <div class="promise-point">
+              <div class="promise-point-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div>
+              <h3>Qualität vor Abschluss</h3>
+              <p>Ich liefere zuerst Ergebnisse. Der Preis kommt, wenn der Wert sichtbar ist.</p>
+            </div>
           </div>
+          <a href="#termin" class="btn btn-light btn-lg" data-cal-link="ablaufo/gespraech" data-cal-namespace="gespraech" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","locale":"de"}'>Unverbindliches Erstgespräch&nbsp;→</a>
         </div>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section class="section section--alt" aria-labelledby="faq-title">
+    <section class="section" aria-labelledby="faq-title">
       <div class="container measure">
         <div class="sec-head reveal">
           <p class="eyebrow">FAQ</p>
@@ -221,20 +303,23 @@
       </div>
     </section>
 
-    <!-- KONTAKT -->
-    <section class="section contact" aria-labelledby="contact-title">
+    <!-- TERMIN BUCHEN (finaler CTA) -->
+    <section id="termin" class="section section--alt" aria-labelledby="booking-title">
       <div class="container">
-        <div class="contact-box reveal">
-          <p class="eyebrow">Kontakt</p>
-          <h2 id="contact-title">Lassen Sie uns 30 Minuten sprechen.</h2>
-          <p class="sec-sub">Kein Pitch, keine Verpflichtung – eine ehrliche Einschätzung Ihrer Abläufe.</p>
-          <a href="mailto:bakir@ablaufo.de" class="btn btn-primary btn-lg">bakir@ablaufo.de</a>
-          <p class="contact-meta">
-            <strong>Burak Bakir</strong> · ablaufo · Regensburg<br>
-            <!-- PLATZHALTER: Telefonnummer eintragen -->
-            <a href="tel:+490000000000">+49 (0) 000 0000000</a> <span class="placeholder-note">(Platzhalter)</span>
-          </p>
+        <div class="sec-head reveal">
+          <p class="eyebrow">Termin buchen</p>
+          <h2 id="booking-title">30-Minuten-Gespräch vereinbaren</h2>
+          <p class="sec-sub">Kostenlos und unverbindlich. Wählen Sie direkt einen freien Termin – kein Formular, kein Hin und Her.</p>
         </div>
+        <div class="reveal" style="text-align:center;padding:var(--sp-lg) 0">
+          <a class="btn btn-primary btn-lg" data-cal-link="ablaufo/gespraech" data-cal-namespace="gespraech" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","locale":"de"}'>Termin auswählen&nbsp;→</a>
+        </div>
+        <p class="contact-meta reveal" style="text-align:center">
+          <strong>Burak Bakir</strong> · ablaufo · Regensburg ·
+          <a href="mailto:bakir@ablaufo.de">bakir@ablaufo.de</a> ·
+          <!-- PLATZHALTER: Telefonnummer eintragen -->
+          <a href="tel:+490000000000">+49 (0) 000 0000000</a> <span class="placeholder-note">(Platzhalter)</span>
+        </p>
       </div>
     </section>
 
@@ -262,6 +347,45 @@
       }, { threshold: 0.12 });
       els.forEach(function (el) { io.observe(el); });
     })();
+  </script>
+
+  <!-- Studien-Zähler: zählen beim Scrollen hoch -->
+  <script>
+    (function () {
+      var nums = document.querySelectorAll('.stat-num');
+      if (!nums.length) return;
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function fmt(v, dec) { return v.toFixed(dec).replace('.', ','); }
+      function run(el) {
+        var to = parseFloat(el.getAttribute('data-to')) || 0;
+        var dec = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var suf = el.getAttribute('data-suffix') || '';
+        if (reduce) { el.textContent = fmt(to, dec) + suf; return; }
+        var start = null, dur = 1400;
+        function step(ts) {
+          if (start === null) start = ts;
+          var p = Math.min((ts - start) / dur, 1);
+          var eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = fmt(to * eased, dec) + suf;
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+      if (!('IntersectionObserver' in window)) { nums.forEach(run); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { run(e.target); io.unobserve(e.target); } });
+      }, { threshold: 0.3 });
+      nums.forEach(function (n) { io.observe(n); });
+    })();
+  </script>
+
+  <!-- Cal.eu Popup-Widget -->
+  <script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.eu/embed/embed.js", "init");
+    Cal("init", "gespraech", {origin:"https://app.cal.eu"});
+    Cal.config = Cal.config || {};
+    Cal.config.forwardQueryParams = true;
+    Cal.ns.gespraech("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
   </script>
 
 </body>
