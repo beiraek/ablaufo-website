@@ -1,4 +1,11 @@
-.claude/
-.obsidian/
-erstkunden-playbook.md
-telefon-leitfaden-kanzleien.md
+# ── ablaufo-Repo: NUR die Website ist öffentlich ──────────────────
+# Der Vault (Coaching, Wissen, Business, Notizen, Claude-Config) bleibt
+# privat und wird über Obsidian Sync gesichert, NICHT über dieses Repo.
+#
+# Strategie: erst alles ignorieren, dann nur die Website wieder freigeben.
+
+/*
+
+# Freigegeben (landet öffentlich auf GitHub Pages):
+!/.gitignore
+!/docs/
