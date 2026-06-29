@@ -239,7 +239,7 @@ a:hover { color: var(--primary-active); }
 
 /* ─── Sektionen ────────────────────────────────────────────── */
 .section { padding-block: var(--sp-section); }
-section[id] { scroll-margin-top: 80px; }
+section[id] { scroll-margin-top: 64px; }
 .section--alt { background: var(--surface-soft); border-block: 1px solid var(--hairline-soft); }
 .sec-head { text-align: center; max-width: 640px; margin: 0 auto var(--sp-xxl); }
 .sec-head .eyebrow { justify-content: center; }
@@ -420,15 +420,15 @@ details p {
 }
 .back-link { display: inline-block; margin-top: var(--sp-xxl); font-size: 0.9rem; }
 
-/* ─── Reveal (GSAP-gesteuert) ────────────────────────────────── */
-/* Nur verstecken, wenn JS aktiv ist (Klasse .js am <html>). GSAP setzt
-   danach inline-Styles und blendet beim Scrollen ein. Fällt GSAP aus,
-   schaltet das Init-Script .is-visible und der Inhalt bleibt sichtbar. */
-.js .reveal { opacity: 0; }
-.js .reveal.is-visible { opacity: 1; }
+/* ─── Reveal (IntersectionObserver + CSS) ───────────────────── */
+/* Nur verstecken, wenn JS aktiv ist (Klasse .js am <html>). Ein nativer
+   IntersectionObserver schaltet beim Reinscrollen .is-visible. Kein JS/IO
+   oder reduzierte Bewegung -> Inhalt bleibt/wird sofort sichtbar. */
+.js .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+.js .reveal.is-visible { opacity: 1; transform: none; }
 
 @media (prefers-reduced-motion: reduce) {
-  .js .reveal { opacity: 1; }
+  .js .reveal { opacity: 1; transform: none; }
   .eyebrow .dot { animation: none; }
   .steps .step.is-visible .step-num { animation: none; }
   .rotate > span { animation: none; opacity: 0; }
@@ -438,9 +438,10 @@ details p {
 
 /* ─── Responsive ─────────────────────────────────────────────── */
 @media (min-width: 600px) {
-  .trust-inner { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .trust-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (min-width: 760px) {
+  .trust-inner { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .cards { grid-template-columns: repeat(3, 1fr); }
   .steps { grid-template-columns: repeat(3, 1fr); }
   .stats { grid-template-columns: repeat(3, 1fr); }
