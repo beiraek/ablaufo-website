@@ -460,7 +460,4 @@ details p {
 @media (max-width: 600px) {
   .hero-cta { width: 100%; }
   .hero-cta .btn { width: 100%; }
-  /* Kompakter auf dem Handy: weniger Padding = weniger Scrollen, ruhigerer Fluss */
-  :root { --sp-section: 52px; }
-  .sec-head { margin-bottom: var(--sp-xl); }
 }
